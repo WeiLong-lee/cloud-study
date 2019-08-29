@@ -1,0 +1,28 @@
+server:
+  port: 28090
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+      #是否与服务发现组件进行结合
+        locator:
+          enabled: true
+      # 路由转发
+#      routes:
+#      - id: neo_route
+#        uri: lb://SERVICE-CONSUMER
+#        predicates:   # 匹配条件
+#        - Path=/consumer/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:28081/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+

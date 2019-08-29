@@ -1,0 +1,24 @@
+
+#服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:28081/eureka/
+
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config-server
+      # server 地址
+      uri: http://127.0.0.1:28098/
+      # 环境配置
+      profile: test
+      # 分支
+      label: config-client-dev
+      快速失败
+      fail-fast: true

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: nacos-client
+#  profiles:
+#    active: dev
+  cloud:
+    nacos:
+      # 注册到nacos 注册中心
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+         # 指定group
+        group: DEFAULT_GROUP
+        # 文件后缀，默认为properties, 支持yaml
+        file-extension: yaml
+        # 命名空间
+        namespace: 60eac083-e55b-4e4d-9292-7eee93702ea0
+        # 指定前缀
+        prefix: nacos-client-prod
